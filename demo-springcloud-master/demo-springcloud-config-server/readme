@@ -1,0 +1,31 @@
+一、发布本地配置文件
+	a、客户端配置bootstrap.properties
+	
+二、本地文件加密
+	对称加密与非对称加密资料：https://segmentfault.com/a/1190000011680775
+	
+	（一）对称加密
+	1、使用jce加密
+	a、下载JCE，解压
+	b、两个jar包拷贝到我们的jdk安装目录下，我的是%JAVA_HOME%\jre\lib\security，覆盖该目录下原有的文件。 
+	c、bootstrap.properties中encrypt.key=sang
+	d、http://localhost:8090/encrypt/status
+	
+	加密：curl localhost:8090/encrypt -d mysecret
+	解密：curl localhost:8090/decrypt -d  密文
+	
+	application.properties 中加入spring.cloud.config.server.encrypt.enabled=false，避免springcloud自动解密
+	
+	（二）非对称加密
+	 http://blog.csdn.net/liuxinghao/article/details/78216201
+	 
+	 1、到application.properties增加配置
+	 2、到jdk安装目录bin下执行 keytool -genkey -alias demo.keystore -keyalg RSA -validity 40000 -keystore /D:\AndroidFile/demo.keystore/
+	 3、将生成demo.keystore放入resource目录下
+	 4、配置pom.xml
+	 5、启动服务，http://localhost:8090/encrypt/status验证
+	 
+三、手动刷新配置文件的更新
+	
+三、发布本地仓库文件
+四、发布远程仓库文件
