@@ -26,6 +26,9 @@
 	 5、启动服务，http://localhost:8090/encrypt/status验证
 	 
 三、手动刷新配置文件的更新
+	curl -x post http://localhost:8090/refresh
 	
 三、发布本地仓库文件
 四、发布远程仓库文件
+
+注意事项：如果本地和远程有一样的properties文件，会优先读本地的文件
