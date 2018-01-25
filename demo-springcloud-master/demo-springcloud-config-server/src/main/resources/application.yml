@@ -1,0 +1,47 @@
+#定义启动端口
+server:
+  port: 8090
+
+#case1：远程调用
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/allengdsz/spring-cloud-demo/  # 配置git仓库的地址
+          search-paths: config-client  # git仓库地址下的相对地址，可以配置多个，用,分割。                         
+          username:  allengdsz                                            # git仓库的账号
+          password:  Allen56909416                                            # git仓库的密码
+          
+
+# case2：读取本地配置文件 
+#spring: 
+#    profiles: 
+#         active: native
+#自动抓取src/main/resources/config/文件夹下的配置  
+#    cloud:
+#         config:
+#                server:
+#                      native:
+#                           searchLocations: classpath:/config
+                           
+#非对称秘钥配置
+encrypt:
+        keyStore:
+          location: classpath:/demo.keystore
+          alias: demo.keystore
+          password: 123456
+          secret: 123456                           
+          
+#ureka注册          
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/   ## 注册中心eurka地址
+      
+
+          
+
+          
