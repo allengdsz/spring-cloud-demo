@@ -8,8 +8,7 @@
 	1、使用jce加密
 	a、下载JCE，解压
 	b、两个jar包拷贝到我们的jdk安装目录下，我的是%JAVA_HOME%\jre\lib\security，覆盖该目录下原有的文件。 
-	c、bootstrap.properties中encrypt.key=sang
-	d、http://localhost:8090/encrypt/status
+	c、http://localhost:8090/encrypt/status
 	
 	加密：curl localhost:8090/encrypt -d mysecret
 	解密：curl localhost:8090/decrypt -d  密文
