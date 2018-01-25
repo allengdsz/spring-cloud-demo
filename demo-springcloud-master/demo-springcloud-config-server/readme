@@ -27,7 +27,7 @@
 三、手动刷新配置文件的更新
 	curl -x post http://localhost:8090/refresh
 	
-三、发布本地仓库文件
-四、发布远程仓库文件
+三、发布本地仓库文件/发布远程仓库文件
+	见application.yml的配置
 
 注意事项：如果本地和远程有一样的properties文件，会优先读本地的文件
