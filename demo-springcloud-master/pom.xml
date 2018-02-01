@@ -20,7 +20,8 @@
         <module>demo-springcloud-config-client</module>
         <module>demo-springcloud-netflix-eureka-server</module>
         <module>demo-springcloud-netflix-eureka-client</module>
-    <module>demo-springcloud-netflix-eureka-server-ha</module>
+<!--     <module>demo-springcloud-netflix-eureka-server-ha</module> -->
+    <module>demo-springcloud-netflix-eureka-producer</module>
   </modules>
 
     <dependencyManagement>
