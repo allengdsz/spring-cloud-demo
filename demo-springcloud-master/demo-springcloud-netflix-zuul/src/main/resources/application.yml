@@ -11,7 +11,7 @@ zuul:
   routes:
     api-a:
       path: /produce1/**
-      serviceId: spring-cloud-client-producer1
+      serviceId: spring-cloud-client-producer 
     api-b:
       path: /client/**
       serviceId: eureka-client
