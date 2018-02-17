@@ -24,6 +24,7 @@
     <module>demo-springcloud-netflix-eureka-producer</module>
     <module>demo-spring-cloud-netflix-eureka-ha</module>
     <module>demo-springcloud-netflix-zuul</module>
+    <module>demo-springcloud-netflix-ribbon</module>
   </modules>
 
     <dependencyManagement>
